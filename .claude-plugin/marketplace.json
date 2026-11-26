@@ -1,0 +1,122 @@
+{
+  "name": "claude-rental-team",
+  "owner": {
+    "name": "diegomarcello",
+    "url": "https://github.com/diegomarcello"
+  },
+  "description": "Claude agents, skills, commands and templates to run a real estate company in Brazil, the US and Europe: buying, appraisal, sales, renovation and property management.",
+  "plugins": [
+    {
+      "name": "rt-executive",
+      "source": "./executive",
+      "description": "Company direction, KPIs, approval authority and cross-department routing. (skeleton)",
+      "version": "0.1.0",
+      "category": "executive"
+    },
+    {
+      "name": "rt-acquisitions",
+      "source": "./acquisitions",
+      "description": "Property sourcing, opportunity screening, feasibility and purchase negotiation. (skeleton)",
+      "version": "0.1.0",
+      "category": "acquisitions"
+    },
+    {
+      "name": "rt-appraisal",
+      "source": "./appraisal",
+      "description": "Market, income and cost valuation, and technical property inspection. (skeleton)",
+      "version": "0.1.0",
+      "category": "appraisal"
+    },
+    {
+      "name": "rt-legal",
+      "source": "./legal",
+      "description": "Title due diligence, contracts, tenancy law, disputes, privacy and anti-money-laundering. (skeleton)",
+      "version": "0.1.0",
+      "category": "legal"
+    },
+    {
+      "name": "rt-renovation",
+      "source": "./renovation",
+      "description": "Scope, budget, schedule and quality control of renovation works. (skeleton)",
+      "version": "0.1.0",
+      "category": "renovation"
+    },
+    {
+      "name": "rt-marketing",
+      "source": "./marketing",
+      "description": "Campaigns, listings, content, paid media and lead generation. (skeleton)",
+      "version": "0.1.0",
+      "category": "marketing"
+    },
+    {
+      "name": "rt-pre-sales",
+      "source": "./pre-sales",
+      "description": "Lead qualification, visit scheduling and follow-up before the sales stage. (skeleton)",
+      "version": "0.1.0",
+      "category": "pre-sales"
+    },
+    {
+      "name": "rt-sales",
+      "source": "./sales",
+      "description": "Proposals, negotiation, financing, closing and commissions. (skeleton)",
+      "version": "0.1.0",
+      "category": "sales"
+    },
+    {
+      "name": "rt-crm",
+      "source": "./crm",
+      "description": "Pipeline, segmentation, data quality and automated customer journeys. (skeleton)",
+      "version": "0.1.0",
+      "category": "crm"
+    },
+    {
+      "name": "rt-property-management",
+      "source": "./property-management",
+      "description": "Leasing, tenants, inspections, maintenance and condominium administration. (skeleton)",
+      "version": "0.1.0",
+      "category": "property-management"
+    },
+    {
+      "name": "rt-post-sales",
+      "source": "./post-sales",
+      "description": "Handover, warranty, complaints and customer retention. (skeleton)",
+      "version": "0.1.0",
+      "category": "post-sales"
+    },
+    {
+      "name": "rt-finance",
+      "source": "./finance",
+      "description": "Payables, receivables, collections, cash, owner payouts, close and taxes. (skeleton)",
+      "version": "0.1.0",
+      "category": "finance"
+    },
+    {
+      "name": "rt-procurement",
+      "source": "./procurement",
+      "description": "Suppliers, contractors and quote comparison. (skeleton)",
+      "version": "0.1.0",
+      "category": "procurement"
+    },
+    {
+      "name": "rt-human-resources",
+      "source": "./human-resources",
+      "description": "Recruiting, onboarding, performance and compensation. (skeleton)",
+      "version": "0.1.0",
+      "category": "human-resources"
+    },
+    {
+      "name": "rt-technology-data",
+      "source": "./technology-data",
+      "description": "Systems integration, business intelligence and information security. (skeleton)",
+      "version": "0.1.0",
+      "category": "technology-data"
+    },
+    {
+      "name": "rt-jurisdictions",
+      "source": "./jurisdictions",
+      "description": "Brazil, United States and Europe rules used by all departments. (skeleton)",
+      "version": "0.1.0",
+      "category": "jurisdictions"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "rt-property-management",
+  "description": "Leasing, tenants, inspections, maintenance and condominium administration. (skeleton)",
+  "version": "0.1.0",
+  "author": {
+    "name": "diegomarcello",
+    "url": "https://github.com/diegomarcello"
+  },
+  "homepage": "https://github.com/diegomarcello/claude-rental-team/tree/main/property-management",
+  "repository": "https://github.com/diegomarcello/claude-rental-team",
+  "license": "GPL-2.0-only",
+  "skills": "./skills"
+}
