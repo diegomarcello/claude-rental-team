@@ -46,10 +46,12 @@ jurisdictions/                    shared country rules
 orchestration/                    cross-department workflows
 standards/                        company standards
 templates/                        models for new files
+docs/                             documentation site
 ```
 
 ## Documentation
 
+- [Site and user guide (Portuguese)](docs/README.md)
 - [Content review](CONTENT-REVIEW.md)
 - [Installation](INSTALLATION.md)
 - [Conventions](CONVENTIONS.md)

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeiros passos · claude-rental-team</title>
+<meta name="description" content="Documentação do claude-rental-team: plugins para o Claude Code voltados à operação imobiliária.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="masthead">
+<a class="brand" href="index.html">claude-rental-team</a>
+<p>Documentação · versão 0.4.0 (rascunho)</p>
+<a class="repository" href="https://github.com/diegomarcello/claude-rental-team">Repositório</a>
+</header>
+<div class="layout">
+<nav class="menu" aria-label="Seções da documentação"><ol><li><a href="index.html">Visão geral</a></li><li><a href="como-funciona.html">Como funciona</a></li><li><a href="primeiros-passos.html" aria-current="page">Primeiros passos</a></li><li><a href="dia-a-dia.html">Uso no dia a dia</a></li><li><a href="fluxos.html">Fluxos de trabalho</a></li><li><a href="departamentos.html">Departamentos</a></li><li><a href="governanca.html">Governança e limites</a></li></ol></nav>
+<main id="conteudo">
+<article>
+<h1>Primeiros passos</h1>
+<p>A instalação é feita dentro do Claude Code. Em seguida, a empresa registra suas próprias decisões antes do primeiro uso real.</p>
+<nav class="contents" aria-labelledby="contents-title"><p id="contents-title">Nesta página</p><ul><li><a href="#requisitos">Requisitos</a></li><li><a href="#1-adicionar-o-catalogo">1. Adicionar o catálogo</a></li><li><a href="#2-instalar-os-plugins">2. Instalar os plugins</a></li><li><a href="#3-configurar-a-empresa">3. Configurar a empresa</a></li><li><a href="#4-proteger-os-dados">4. Proteger os dados</a></li><li><a href="#5-conferir">5. Conferir</a></li><li><a href="#atualizacoes">Atualizações</a></li></ul></nav>
+<h2 id="requisitos">Requisitos</h2>
+<ul><li>Claude Code instalado e autenticado.</li><li><code>python3</code> disponível no computador, para o aviso de configuração e para os cálculos.</li><li>Uma pasta de trabalho da empresa, separada deste repositório.</li></ul>
+<h2 id="1-adicionar-o-catalogo">1. Adicionar o catálogo</h2>
+<p>Abra o Claude Code na pasta da empresa e execute:</p>
+<pre tabindex="0"><code>/plugin marketplace add diegomarcello/claude-rental-team</code></pre>
+<h2 id="2-instalar-os-plugins">2. Instalar os plugins</h2>
+<p>Instale primeiro a direção e as jurisdições, porque os demais se apoiam nelas:</p>
+<pre tabindex="0"><code>/plugin install rt-executive@claude-rental-team
+/plugin install rt-jurisdictions@claude-rental-team</code></pre>
+<p>Depois, instale os departamentos do seu tipo de operação.</p>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Operação</th><th scope="col">Plugins adicionais</th></tr></thead><tbody><tr><td>Administração de locação</td><td><code>rt-property-management</code>, <code>rt-finance</code>, <code>rt-legal</code>, <code>rt-marketing</code>, <code>rt-pre-sales</code></td></tr><tr><td>Venda e corretagem</td><td><code>rt-marketing</code>, <code>rt-pre-sales</code>, <code>rt-sales</code>, <code>rt-appraisal</code>, <code>rt-legal</code>, <code>rt-finance</code>, <code>rt-post-sales</code></td></tr><tr><td>Compra, reforma e revenda</td><td><code>rt-acquisitions</code>, <code>rt-appraisal</code>, <code>rt-legal</code>, <code>rt-renovation</code>, <code>rt-procurement</code>, <code>rt-marketing</code>, <code>rt-finance</code></td></tr></tbody></table></div>
+<p>Cada departamento é instalado com o mesmo formato:</p>
+<pre tabindex="0"><code>/plugin install rt-property-management@claude-rental-team
+/plugin install rt-finance@claude-rental-team
+/plugin install rt-legal@claude-rental-team</code></pre>
+<p>A lista completa está em <a href="departamentos.html">Departamentos</a>. Se o Claude Code pedir, reinicie a sessão para carregar os plugins.</p>
+<h2 id="3-configurar-a-empresa">3. Configurar a empresa</h2>
+<pre tabindex="0"><code>/rt-executive:company-setup</code></pre>
+<p>A configuração pergunta, um bloco por vez:</p>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Item</th><th scope="col">O que informar</th></tr></thead><tbody><tr><td>Contexto da empresa</td><td>Identificação, praças, linhas de negócio, responsáveis, taxas, garantias, prazos e sistemas</td></tr><tr><td>Alçadas de aprovação</td><td>Cada linha da matriz: operação, limite, quem solicita, quem aprova e evidência</td></tr><tr><td>Régua de cobrança</td><td>Dias, ação, canal, responsável, aprovador e prazo de aviso ao garantidor</td></tr><tr><td>Modelos de locação</td><td>Notificação de cobrança, aging de recebíveis, resumo do contrato, registro de vistoria e ficha do pretendente</td></tr></tbody></table></div>
+<p>Para cada modelo, é possível indicar um documento próprio sem dados pessoais, pedir uma minuta para revisão, deixar para depois ou marcar que não se aplica. Responder "depois" é sempre permitido: o item fica pendente.</p>
+<aside class="callout"><p><strong>Quando o aviso aparece.</strong> O Claude Code não executa nada durante a instalação. O <code>rt-executive</code> mostra um lembrete na primeira sessão depois de instalado e volta a mostrá-lo enquanto o <code>company-context.md</code> do projeto tiver pendências. As skills de locação também perguntam o que precisam no momento do uso.</p></aside>
+<h2 id="4-proteger-os-dados">4. Proteger os dados</h2>
+<p>Se a pasta da empresa for um repositório git, inclua no arquivo <code>.gitignore</code>:</p>
+<pre tabindex="0"><code>/company-context.md
+/private/</code></pre>
+<p>Avalie também se <code>company-templates/</code> deve ficar fora do repositório.</p>
+<h2 id="5-conferir">5. Conferir</h2>
+<ul><li>Execute <code>/plugin</code> e confirme que os departamentos aparecem como instalados.</li><li>Abra o <code>company-context.md</code> e revise a tabela <code>Setup status</code>.</li><li>Faça um pedido de teste com dados fictícios, como os de <a href="dia-a-dia.html">Uso no dia a dia</a>.</li></ul>
+<h2 id="atualizacoes">Atualizações</h2>
+<pre tabindex="0"><code>/plugin marketplace update claude-rental-team</code></pre>
+<p>Depois, atualize os plugins instalados pelo menu <code>/plugin</code>. Os arquivos da empresa ficam na pasta de trabalho e não são substituídos.</p>
+</article>
+<nav class="pager" aria-label="Páginas vizinhas"><a rel="prev" href="como-funciona.html"><span>Anterior</span> Como funciona</a><a rel="next" href="dia-a-dia.html"><span>Próxima</span> Uso no dia a dia</a></nav>
+<footer>
+<p>Projeto independente distribuído sob a licença GPL versão 2. Claude e Claude Code são produtos da Anthropic.</p>
+<p>O conteúdo é um rascunho e não constitui parecer jurídico, tributário ou de avaliação.</p>
+</footer>
+</main>
+</div>
+</body>
+</html>

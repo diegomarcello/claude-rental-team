@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como funciona · claude-rental-team</title>
+<meta name="description" content="Documentação do claude-rental-team: plugins para o Claude Code voltados à operação imobiliária.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="masthead">
+<a class="brand" href="index.html">claude-rental-team</a>
+<p>Documentação · versão 0.4.0 (rascunho)</p>
+<a class="repository" href="https://github.com/diegomarcello/claude-rental-team">Repositório</a>
+</header>
+<div class="layout">
+<nav class="menu" aria-label="Seções da documentação"><ol><li><a href="index.html">Visão geral</a></li><li><a href="como-funciona.html" aria-current="page">Como funciona</a></li><li><a href="primeiros-passos.html">Primeiros passos</a></li><li><a href="dia-a-dia.html">Uso no dia a dia</a></li><li><a href="fluxos.html">Fluxos de trabalho</a></li><li><a href="departamentos.html">Departamentos</a></li><li><a href="governanca.html">Governança e limites</a></li></ol></nav>
+<main id="conteudo">
+<article>
+<h1>Como funciona</h1>
+<p>Cada departamento da empresa é um plugin independente. A empresa instala apenas os departamentos que usa, e o Claude passa a seguir os processos descritos neles.</p>
+<nav class="contents" aria-labelledby="contents-title"><p id="contents-title">Nesta página</p><ul><li><a href="#as-pecas">As peças</a></li><li><a href="#o-caminho-de-um-pedido">O caminho de um pedido</a></li><li><a href="#tres-tipos-de-informacao">Três tipos de informação</a></li><li><a href="#arquivos-no-projeto-da-empresa">Arquivos no projeto da empresa</a></li><li><a href="#confirmacao-das-decisoes-da-empresa">Confirmação das decisões da empresa</a></li><li><a href="#paises">Países</a></li></ul></nav>
+<h2 id="as-pecas">As peças</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Peça</th><th scope="col">O que é</th><th scope="col">Exemplo</th></tr></thead><tbody><tr><td>Plugin</td><td>O pacote de um departamento</td><td><code>rt-finance</code></td></tr><tr><td>Skill</td><td>O roteiro de uma tarefa: entradas, processo, regras, aprovação e casos de teste</td><td><code>rt-finance:collections</code></td></tr><tr><td>Roteador</td><td>A skill que escolhe qual outra skill atende o pedido</td><td><code>rt-finance:router-finance</code></td></tr><tr><td>Agente</td><td>Um papel especializado que reúne uma ou mais skills</td><td><code>rt-lease-admin</code></td></tr><tr><td>Comando</td><td>Um atalho acionado somente pela pessoa</td><td><code>/rt-finance:rt-owner-payout</code></td></tr><tr><td>Referência</td><td>O conteúdo da skill para um país</td><td><code>brazil.md</code></td></tr><tr><td>Problemas conhecidos</td><td>Correções que prevalecem sobre a referência</td><td><code>known-issues.md</code></td></tr><tr><td>Jurisdições</td><td>Regras por país compartilhadas pelos departamentos</td><td><code>rt-jurisdictions:jurisdiction-lookup</code></td></tr><tr><td>Script</td><td>Um cálculo executado por programa, e não estimado</td><td><code>accounts_receivable.py</code></td></tr></tbody></table></div>
+<h2 id="o-caminho-de-um-pedido">O caminho de um pedido</h2>
+<ol><li><strong>Pedido.</strong> A pessoa descreve a tarefa em linguagem comum ou usa um comando.</li><li><strong>Skill.</strong> O Claude carrega a skill correspondente. Se duas servirem, o roteador pergunta qual.</li><li><strong>País.</strong> A jurisdição é identificada. Se não estiver clara, o Claude pergunta.</li><li><strong>Referência.</strong> O Claude lê apenas a referência daquele país e os problemas conhecidos.</li><li><strong>Empresa.</strong> O Claude consulta o <code>company-context.md</code> do projeto e pergunta o que falta.</li><li><strong>Entrega.</strong> O resultado traz o que foi feito, os cálculos com suas entradas e as pendências.</li><li><strong>Aprovação.</strong> A entrega indica quem precisa aprovar. A decisão é sempre de uma pessoa.</li></ol>
+<h2 id="tres-tipos-de-informacao">Três tipos de informação</h2>
+<p>O pacote procura separar, em cada resposta, três origens que têm pesos diferentes:</p>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Tipo</th><th scope="col">Origem</th><th scope="col">Como tratar</th></tr></thead><tbody><tr><td>Regra legal</td><td>Referência do país</td><td>Conferir na fonte oficial antes de decidir</td></tr><tr><td>Prática de mercado</td><td>Referência do país</td><td>Avaliar se vale para a sua praça</td></tr><tr><td>Decisão da empresa</td><td><code>company-context.md</code> confirmado</td><td>Vale como regra interna</td></tr></tbody></table></div>
+<h2 id="arquivos-no-projeto-da-empresa">Arquivos no projeto da empresa</h2>
+<p>O pacote é instalado no Claude Code. Os dados da empresa ficam na pasta de trabalho dela, fora dos plugins.</p>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Arquivo ou pasta</th><th scope="col">Conteúdo</th><th scope="col">Cuidado</th></tr></thead><tbody><tr><td><code>company-context.md</code></td><td>Perfil, alçadas, taxas, políticas e tabela de confirmação</td><td>Nunca publicar</td></tr><tr><td><code>company-templates/</code></td><td>Modelos da empresa ou minutas aprovadas por ela</td><td>Usar cópias sem dados pessoais</td></tr><tr><td><code>private/</code></td><td>Documentos que não devem ser versionados</td><td>Manter fora do git</td></tr></tbody></table></div>
+<h2 id="confirmacao-das-decisoes-da-empresa">Confirmação das decisões da empresa</h2>
+<p>O <code>company-context.md</code> tem uma tabela chamada <code>Setup status</code>. Um item só vale como regra da empresa quando está como <code>confirmed</code> e registra quem confirmou.</p>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Situação</th><th scope="col">Significado</th></tr></thead><tbody><tr><td><code>pending</code></td><td>Ainda não respondido. O Claude pergunta ou marca a lacuna.</td></tr><tr><td><code>confirmed</code></td><td>Uma pessoa identificada afirmou que é a regra real.</td></tr><tr><td><code>not-applicable</code></td><td>Não se aplica à empresa, com o motivo registrado.</td></tr></tbody></table></div>
+<p>Valores preenchidos como exemplo não se tornam regra apenas por estarem no arquivo. Isso vale especialmente para a matriz de alçadas e a régua de cobrança.</p>
+<h2 id="paises">Países</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Região</th><th scope="col">Idioma da referência</th><th scope="col">Observação</th></tr></thead><tbody><tr><td>Brasil</td><td>Português</td><td>Inclui o piloto de locação, com modelos em rascunho e cálculos</td></tr><tr><td>Estados Unidos</td><td>Inglês</td><td>Regras estaduais apenas onde o arquivo as cita</td></tr><tr><td>Europa</td><td>Inglês</td><td>Foco em Portugal, Espanha, Alemanha e França</td></tr></tbody></table></div>
+<p>O Claude responde no idioma de quem pergunta.</p>
+</article>
+<nav class="pager" aria-label="Páginas vizinhas"><a rel="prev" href="index.html"><span>Anterior</span> Visão geral</a><a rel="next" href="primeiros-passos.html"><span>Próxima</span> Primeiros passos</a></nav>
+<footer>
+<p>Projeto independente distribuído sob a licença GPL versão 2. Claude e Claude Code são produtos da Anthropic.</p>
+<p>O conteúdo é um rascunho e não constitui parecer jurídico, tributário ou de avaliação.</p>
+</footer>
+</main>
+</div>
+</body>
+</html>

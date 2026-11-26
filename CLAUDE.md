@@ -16,6 +16,7 @@ Draft. Reference content is integrated and pending professional review; see `CON
 - `jurisdictions/`: country rules shared by all departments
 - `orchestration/`: cross-department workflows
 - `standards/`, `templates/`: how to write and review files
+- `docs/`: documentation site in Portuguese. After changing plugins, skills, commands, agents or workflows, run `python3 docs/build.py`.
 - `.content-source/`: the original content package. Do not load or edit it for normal work.
 
 ## Rules

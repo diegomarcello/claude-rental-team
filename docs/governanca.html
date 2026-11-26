@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Governança e limites · claude-rental-team</title>
+<meta name="description" content="Documentação do claude-rental-team: plugins para o Claude Code voltados à operação imobiliária.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="masthead">
+<a class="brand" href="index.html">claude-rental-team</a>
+<p>Documentação · versão 0.4.0 (rascunho)</p>
+<a class="repository" href="https://github.com/diegomarcello/claude-rental-team">Repositório</a>
+</header>
+<div class="layout">
+<nav class="menu" aria-label="Seções da documentação"><ol><li><a href="index.html">Visão geral</a></li><li><a href="como-funciona.html">Como funciona</a></li><li><a href="primeiros-passos.html">Primeiros passos</a></li><li><a href="dia-a-dia.html">Uso no dia a dia</a></li><li><a href="fluxos.html">Fluxos de trabalho</a></li><li><a href="departamentos.html">Departamentos</a></li><li><a href="governanca.html" aria-current="page">Governança e limites</a></li></ol></nav>
+<main id="conteudo">
+<article>
+<h1>Governança e limites</h1>
+<p>O pacote apoia o trabalho da equipe. A responsabilidade pelas decisões continua sendo da empresa e dos profissionais habilitados.</p>
+<nav class="contents" aria-labelledby="contents-title"><p id="contents-title">Nesta página</p><ul><li><a href="#aprovacao-humana">Aprovação humana</a></li><li><a href="#dados-pessoais">Dados pessoais</a></li><li><a href="#o-que-roda-no-computador">O que roda no computador</a></li><li><a href="#estado-do-conteudo">Estado do conteúdo</a></li><li><a href="#problemas-ja-identificados">Problemas já identificados</a></li><li><a href="#antes-de-adotar-na-empresa">Antes de adotar na empresa</a></li><li><a href="#perguntas-frequentes">Perguntas frequentes</a></li></ul></nav>
+<h2 id="aprovacao-humana">Aprovação humana</h2>
+<ul><li>Nenhuma operação financeira, assinatura ou comunicação regulatória ocorre sem aprovação de uma pessoa.</li><li>Quem solicita não aprova nem executa o próprio pagamento.</li><li>Contas da empresa ficam separadas das contas de clientes, proprietários e garantias.</li></ul>
+<p>Esses limites são instruções dadas ao modelo. Eles não substituem os controles de acesso dos bancos e sistemas da empresa.</p>
+<h2 id="dados-pessoais">Dados pessoais</h2>
+<ul><li>Colete e informe o mínimo necessário à tarefa.</li><li>O que é digitado ou anexado é processado pelo serviço Claude. Siga a política de dados da empresa e os termos do plano contratado.</li><li>Use cópias anonimizadas como modelos.</li><li>Confira nos arquivos de jurisdição os prazos legais de privacidade aplicáveis.</li></ul>
+<h2 id="o-que-roda-no-computador">O que roda no computador</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Item</th><th scope="col">O que faz</th></tr></thead><tbody><tr><td>Aviso de configuração</td><td>Ao iniciar a sessão, lê apenas a tabela <code>Setup status</code> e informa os nomes dos itens pendentes. Grava um marcador na pasta de dados do plugin e não usa rede.</td></tr><tr><td>Scripts de cálculo</td><td>Executados quando a tarefa pede o cálculo. Recebem os valores informados e devolvem o resultado.</td></tr></tbody></table></div>
+<h2 id="estado-do-conteudo">Estado do conteúdo</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Parte</th><th scope="col">Situação</th></tr></thead><tbody><tr><td>Referências das skills</td><td>Presentes para os três recortes, pendentes de revisão profissional</td></tr><tr><td>Cálculos</td><td>Quatro scripts, somente para o Brasil</td></tr><tr><td>Modelos</td><td>Rascunhos brasileiros para parte do inventário; os demais têm apenas títulos</td></tr><tr><td>Fluxos</td><td>Sequência definida, sem responsáveis nem prazos</td></tr></tbody></table></div>
+<h2 id="problemas-ja-identificados">Problemas já identificados</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Área</th><th scope="col">Problema registrado</th></tr></thead><tbody><tr><td>Estados Unidos, lavagem de dinheiro</td><td>A regra da FinCEN para imóveis residenciais aparece como vigente; a revisão interna registra anulação em 19/03/2026, com recurso pendente</td></tr><tr><td>Estados Unidos, privacidade</td><td>O consentimento individual da TCPA aparece como exigido; a revisão interna registra anulação em 24/01/2025</td></tr><tr><td>Estados Unidos, locação</td><td>Há apoio em orientação do HUD que foi retirada</td></tr><tr><td>Jurisdições dos EUA e da Europa</td><td>A seção de processo está vazia nos arquivos de jurisdição</td></tr><tr><td>Brasil, financiamento</td><td>Um exemplo traz 3.394,54; para 0,80% ao mês o correto é 3.392,64</td></tr><tr><td>Europa</td><td>Vários exemplos numéricos são norte-americanos</td></tr><tr><td>Cobrança</td><td>Há três réguas de atraso divergentes; a empresa precisa escolher a sua</td></tr></tbody></table></div>
+<p>Os arquivos originais foram preservados, e as correções ficam nos problemas conhecidos de cada skill. A relação completa está na <a href="https://github.com/diegomarcello/claude-rental-team/blob/main/CONTENT-REVIEW.md">revisão de conteúdo</a>.</p>
+<p>A indicação de confiança presente em um arquivo é uma declaração do autor do conteúdo, e não uma certificação.</p>
+<h2 id="antes-de-adotar-na-empresa">Antes de adotar na empresa</h2>
+<ol><li>Concluir a configuração da empresa.</li><li>Obter revisão de advogado, contador e avaliador nas áreas que serão usadas.</li><li>Testar cada rotina com casos fictícios.</li><li>Definir responsáveis e prazos dos fluxos.</li><li>Registrar quem pode aprovar cada tipo de entrega.</li></ol>
+<h2 id="perguntas-frequentes">Perguntas frequentes</h2>
+<h3 id="preciso-instalar-todos-os-departamentos">Preciso instalar todos os departamentos?</h3>
+<p>Não. Instale a direção, as jurisdições e os departamentos que usa. Uma skill pode indicar a continuação em um departamento que precisa então ser instalado.</p>
+<h3 id="funciona-sem-o-arquivo-da-empresa">Funciona sem o arquivo da empresa?</h3>
+<p>Funciona, mas as decisões internas aparecem como pendentes e o resultado fica incompleto.</p>
+<h3 id="posso-alterar-o-conteudo">Posso alterar o conteúdo?</h3>
+<p>Sim, nos termos da licença GPL versão 2. Altere uma cópia do repositório, porque atualizações substituem os arquivos dos plugins instalados.</p>
+<h3 id="onde-relato-um-erro">Onde relato um erro?</h3>
+<p>No <a href="https://github.com/diegomarcello/claude-rental-team">repositório do projeto</a>, sem incluir dados de clientes.</p>
+</article>
+<nav class="pager" aria-label="Páginas vizinhas"><a rel="prev" href="departamentos.html"><span>Anterior</span> Departamentos</a></nav>
+<footer>
+<p>Projeto independente distribuído sob a licença GPL versão 2. Claude e Claude Code são produtos da Anthropic.</p>
+<p>O conteúdo é um rascunho e não constitui parecer jurídico, tributário ou de avaliação.</p>
+</footer>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uso no dia a dia · claude-rental-team</title>
+<meta name="description" content="Documentação do claude-rental-team: plugins para o Claude Code voltados à operação imobiliária.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="masthead">
+<a class="brand" href="index.html">claude-rental-team</a>
+<p>Documentação · versão 0.4.0 (rascunho)</p>
+<a class="repository" href="https://github.com/diegomarcello/claude-rental-team">Repositório</a>
+</header>
+<div class="layout">
+<nav class="menu" aria-label="Seções da documentação"><ol><li><a href="index.html">Visão geral</a></li><li><a href="como-funciona.html">Como funciona</a></li><li><a href="primeiros-passos.html">Primeiros passos</a></li><li><a href="dia-a-dia.html" aria-current="page">Uso no dia a dia</a></li><li><a href="fluxos.html">Fluxos de trabalho</a></li><li><a href="departamentos.html">Departamentos</a></li><li><a href="governanca.html">Governança e limites</a></li></ol></nav>
+<main id="conteudo">
+<article>
+<h1>Uso no dia a dia</h1>
+<p>No cotidiano, a equipe descreve a tarefa, confere o que o Claude perguntou e leva a entrega para quem aprova.</p>
+<nav class="contents" aria-labelledby="contents-title"><p id="contents-title">Nesta página</p><ul><li><a href="#formas-de-pedir">Formas de pedir</a></li><li><a href="#um-bom-pedido">Um bom pedido</a></li><li><a href="#rotina-sugerida">Rotina sugerida</a></li><li><a href="#pedidos-por-area">Pedidos por área</a></li><li><a href="#exemplo-aluguel-em-atraso">Exemplo: aluguel em atraso</a></li><li><a href="#exemplo-repasse-ao-proprietario">Exemplo: repasse ao proprietário</a></li><li><a href="#como-ler-a-entrega">Como ler a entrega</a></li><li><a href="#antes-de-usar-uma-entrega">Antes de usar uma entrega</a></li></ul></nav>
+<h2 id="formas-de-pedir">Formas de pedir</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Forma</th><th scope="col">Quando usar</th><th scope="col">Exemplo</th></tr></thead><tbody><tr><td>Linguagem comum</td><td>Na maior parte dos casos</td><td>"Prepare a cobrança de um aluguel vencido há 20 dias"</td></tr><tr><td>Skill direta</td><td>Quando já se sabe o processo</td><td><code>/rt-finance:collections</code></td></tr><tr><td>Comando</td><td>Tarefas recorrentes com entrada definida</td><td><code>/rt-property-management:rt-screen-tenant</code></td></tr><tr><td>Agente</td><td>Tarefa que envolve um papel inteiro</td><td>"Use o agente rt-lease-admin para revisar a carteira"</td></tr><tr><td>Roteador</td><td>Quando não se sabe quem atende</td><td><code>/rt-executive:router-executive</code></td></tr></tbody></table></div>
+<h2 id="um-bom-pedido">Um bom pedido</h2>
+<p>Informe sempre:</p>
+<ol><li><strong>País e cidade</strong>, ou estado.</li><li><strong>Objetivo</strong>: o que precisa sair pronto.</li><li><strong>Dados</strong>: valores, datas, índice, garantia e cláusulas relevantes.</li><li><strong>Situação</strong>: o que já aconteceu e qual é o prazo.</li></ol>
+<p>Compare:</p>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Pedido vago</th><th scope="col">Pedido completo</th></tr></thead><tbody><tr><td>"Faz o reajuste do aluguel"</td><td>"Brasil. Contrato fictício reajustado pelo IPCA. Calcule o novo aluguel a partir de R$ 3.500,00, com variação acumulada de 4,62%, e prepare o aviso ao locatário para revisão"</td></tr></tbody></table></div>
+<p>Use nomes e documentos somente quando forem necessários à tarefa. Em testes, use dados fictícios.</p>
+<h2 id="rotina-sugerida">Rotina sugerida</h2>
+<p>As cadências abaixo são um ponto de partida. O pacote não define responsáveis nem prazos: cada empresa ajusta os seus.</p>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Quando</th><th scope="col">Atividade</th><th scope="col">Onde pedir</th></tr></thead><tbody><tr><td>Diariamente</td><td>Conciliar recebimentos e identificar atrasos</td><td><code>rt-finance:accounts-receivable</code></td></tr><tr><td>Diariamente</td><td>Qualificar leads e agendar visitas</td><td><code>rt-pre-sales:lead-qualification</code>, <code>rt-pre-sales:visit-scheduling</code></td></tr><tr><td>Diariamente</td><td>Triar chamados de manutenção</td><td><code>rt-property-management:maintenance-requests</code></td></tr><tr><td>Semanalmente</td><td>Retomar contatos em aberto</td><td><code>rt-pre-sales:follow-up-cadence</code></td></tr><tr><td>Semanalmente</td><td>Atualizar a projeção de caixa</td><td><code>rt-finance:cash-flow-forecast</code></td></tr><tr><td>Mensalmente</td><td>Repassar valores aos proprietários</td><td><code>rt-finance:owner-payouts</code></td></tr><tr><td>Mensalmente</td><td>Fechar o mês e revisar indicadores</td><td><code>rt-finance:financial-close</code>, <code>rt-executive:company-kpis</code></td></tr><tr><td>No aniversário do contrato</td><td>Reajustar o aluguel</td><td><code>rt-property-management:lease-administration</code></td></tr><tr><td>A cada nova locação</td><td>Analisar pretendente, contratar e vistoriar</td><td><code>rt-property-management:tenant-screening</code>, <code>rt-legal:contract-drafting-review</code>, <code>rt-property-management:move-inspections</code></td></tr></tbody></table></div>
+<h2 id="pedidos-por-area">Pedidos por área</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Área</th><th scope="col">Exemplo de pedido</th></tr></thead><tbody><tr><td>Locação</td><td>"Brasil. Monte o dossiê de análise do pretendente com os documentos anexados e aponte o que falta"</td></tr><tr><td>Financeiro</td><td>"Brasil. Prepare o demonstrativo de repasse do mês com taxa de administração de 10% e um reparo autorizado de R$ 350,00"</td></tr><tr><td>Jurídico</td><td>"Brasil. Revise esta minuta de locação residencial e liste cláusulas em risco"</td></tr><tr><td>Marketing</td><td>"Escreva o anúncio deste apartamento sem linguagem discriminatória"</td></tr><tr><td>Vendas</td><td>"Brasil. Simule o financiamento nos sistemas SAC e Price e mostre o comprometimento de renda"</td></tr><tr><td>Avaliação</td><td>"Faça a análise comparativa de mercado com estas seis amostras"</td></tr><tr><td>Obras</td><td>"Monte o escopo e o orçamento da reforma deste imóvel, com contingência"</td></tr><tr><td>Direção</td><td>"Revise a matriz de alçadas e aponte conflitos de segregação de funções"</td></tr></tbody></table></div>
+<h2 id="exemplo-aluguel-em-atraso">Exemplo: aluguel em atraso</h2>
+<p>Dados fictícios: aluguel de R$ 2.500,00, vencimento em 05/11/2026 e pagamento em 15/11/2026. O Claude executa o script de contas a receber:</p>
+<pre tabindex="0"><code>python3 accounts_receivable.py --valor-principal 2500.00 --data-vencimento 2026-11-05 --data-pagamento 2026-11-15</code></pre>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Resultado</th><th scope="col">Valor</th></tr></thead><tbody><tr><td>Dias de atraso</td><td>10</td></tr><tr><td>Multa</td><td>R$ 50,00</td></tr><tr><td>Juros</td><td>R$ 8,33</td></tr><tr><td>Valor atualizado</td><td>R$ 2.558,33</td></tr></tbody></table></div>
+<p>O script avisa que aplicou os percentuais padrão de 2% de multa e 1% de juros ao mês. <strong>Confira o contrato antes de usar o valor.</strong></p>
+<h2 id="exemplo-repasse-ao-proprietario">Exemplo: repasse ao proprietário</h2>
+<p>Dados fictícios: aluguel recebido de R$ 5.000,00, taxa de administração de 10%, reparo autorizado de R$ 350,00 e compensação em 10/11/2026.</p>
+<pre tabindex="0"><code>python3 owner_payout.py --aluguel-recebido 5000 --taxa-adm-pct 10 --reparos-autorizados 350 --data-compensacao 2026-11-10</code></pre>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">Resultado</th><th scope="col">Valor</th></tr></thead><tbody><tr><td>Taxa de administração</td><td>R$ 500,00</td></tr><tr><td>Total de descontos</td><td>R$ 850,00</td></tr><tr><td>Repasse líquido</td><td>R$ 4.150,00</td></tr><tr><td>Data prevista</td><td>13/11/2026</td></tr></tbody></table></div>
+<p>O prazo padrão é de três dias úteis. Feriados precisam ser informados, ou a data considera apenas fins de semana.</p>
+<h2 id="como-ler-a-entrega">Como ler a entrega</h2>
+<div class="table" role="region" tabindex="0" aria-label="Tabela"><table><thead><tr><th scope="col">O que aparece</th><th scope="col">O que fazer</th></tr></thead><tbody><tr><td>Pendências</td><td>Fornecer o dado ou registrar a decisão</td></tr><tr><td>Itens marcados como proposta</td><td>Escolher e confirmar antes de aplicar</td></tr><tr><td>Aprovador indicado</td><td>Levar a entrega a essa pessoa</td></tr><tr><td>Referência em rascunho</td><td>Pedir revisão profissional para o que for decisivo</td></tr><tr><td>Avisos do cálculo</td><td>Conferir contrato e premissas</td></tr></tbody></table></div>
+<h2 id="antes-de-usar-uma-entrega">Antes de usar uma entrega</h2>
+<ul class="checklist"><li>O país e o estado estão corretos.</li><li>Os valores e datas conferem com o contrato.</li><li>As decisões da empresa usadas estão confirmadas.</li><li>A regra legal decisiva foi conferida na fonte oficial.</li><li>A pessoa com alçada aprovou.</li></ul>
+</article>
+<nav class="pager" aria-label="Páginas vizinhas"><a rel="prev" href="primeiros-passos.html"><span>Anterior</span> Primeiros passos</a><a rel="next" href="fluxos.html"><span>Próxima</span> Fluxos de trabalho</a></nav>
+<footer>
+<p>Projeto independente distribuído sob a licença GPL versão 2. Claude e Claude Code são produtos da Anthropic.</p>
+<p>O conteúdo é um rascunho e não constitui parecer jurídico, tributário ou de avaliação.</p>
+</footer>
+</main>
+</div>
+</body>
+</html>
