@@ -2,11 +2,11 @@
 
 Lead qualification, visit scheduling and follow-up before the sales stage.
 
-Plugin: `rt-pre-sales` · Status: skeleton
+Plugin: `rt-pre-sales` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,15 +15,15 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-sales-development-rep`
-- `rt-visit-coordinator`
+- `rt-sdr-qualifier`
+- `rt-tour-coordinator`
 
 ## Skills
 
-- `pre-sales-router`
+- `router-pre-sales`
+- `follow-up-cadence`
 - `lead-qualification`
 - `visit-scheduling`
-- `follow-up-cadence`
 
 ## Commands
 

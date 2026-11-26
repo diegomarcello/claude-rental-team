@@ -4,11 +4,11 @@ Guidance for Claude Code in this repository.
 
 ## Purpose
 
-A library of Claude plugins to run a real estate company in Brazil, the US and Europe. It is not an application. All content is written in English.
+A library of Claude plugins to run a real estate company in Brazil, the US and Europe. It is not an application.
 
 ## Status
 
-Skeleton. `TODO` marks content that does not exist yet. Do not treat any file as validated business, legal, tax or valuation guidance.
+Draft. Reference content is integrated and pending professional review; see `CONTENT-REVIEW.md`. Four Brazil calculation scripts exist; after changing one, run `python3 -m unittest discover -s tests`. Templates without a country suffix are headings only.
 
 ## Map
 
@@ -16,6 +16,7 @@ Skeleton. `TODO` marks content that does not exist yet. Do not treat any file as
 - `jurisdictions/`: country rules shared by all departments
 - `orchestration/`: cross-department workflows
 - `standards/`, `templates/`: how to write and review files
+- `.content-source/`: the original content package. Do not load or edit it for normal work.
 
 ## Rules
 

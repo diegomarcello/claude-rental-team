@@ -2,11 +2,11 @@
 
 Suppliers, contractors and quote comparison.
 
-Plugin: `rt-procurement` · Status: skeleton
+Plugin: `rt-procurement` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,13 +15,13 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-procurement-manager`
+- `rt-procurement-leveler`
 
 ## Skills
 
-- `procurement-router`
-- `vendor-management`
+- `router-procurement`
 - `quote-comparison`
+- `vendor-management`
 
 ## Commands
 

@@ -1,5 +1,25 @@
 # Changelog
 
-## 0.1.0 - unreleased
+## 0.4.0 - unreleased
 
-- Initial skeleton: 16 plugins, orchestration, standards, templates and jurisdiction files.
+- New skill `company-setup`: asks for the company context, approval limits, collections ladder and the five missing leasing templates, and records who confirmed each item.
+- Five leasing skills ask for what they need when used.
+- Session start hook in `rt-executive` reminds about pending setup.
+- Approval limits and the collections ladder count as company rules only after confirmation in `Setup status`.
+
+## 0.3.0 - unreleased
+
+- Brazil leasing pilot: 7 references, 4 calculation specs, 19 draft templates.
+- Added scripts for receivables charges, owner payout, rent adjustment and fine, and SAC/Price simulation, with tests.
+- Recorded errors and conflicts found in the delivery; unsigned reviews were not applied.
+
+## 0.2.0 - unreleased
+
+- Integrated reference content for 59 skills and 8 jurisdiction topics in Brazil, the United States and Europe.
+- Adopted the content catalog: 42 agents and 21 commands were renamed or replaced; routers are now `router-<department>`.
+- Replaced the six workflows with the six from the content and added standards from it.
+- Added company questionnaire, content review and template inventory.
+
+## 0.1.0
+
+- Initial skeleton.

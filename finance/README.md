@@ -2,11 +2,11 @@
 
 Payables, receivables, collections, cash, owner payouts, close and taxes.
 
-Plugin: `rt-finance` · Status: skeleton
+Plugin: `rt-finance` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,25 +15,23 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-finance-controller`
-- `rt-accounts-payable-analyst`
-- `rt-accounts-receivable-analyst`
-- `rt-tax-accountant`
-- `rt-treasury-analyst`
+- `rt-ap-ar-controller`
+- `rt-collections-specialist`
+- `rt-treasury-forecaster`
+- `rt-owner-accounting-tax`
 
 ## Skills
 
-- `finance-router`
+- `router-finance`
 - `accounts-payable`
 - `accounts-receivable`
-- `collections`
 - `cash-flow-forecast`
-- `owner-payouts`
+- `collections`
 - `financial-close`
+- `owner-payouts`
 - `tax-planning`
 
 ## Commands
 
-- `/rt-payables-run`
-- `/rt-receivables-aging`
-- `/rt-month-close`
+- `/rt-owner-payout`
+- `/rt-cash-flow`

@@ -1,19 +1,5 @@
-# Communication Standards
+# Inclusive and ethical communication
 
-Status: skeleton.
+No direct or indirect discrimination in advertising, lead screening, credit analysis or recruiting.
 
-## Tone
-
-TODO
-
-## Customer communication
-
-TODO
-
-## Internal communication
-
-TODO
-
-## Languages
-
-TODO
+Source: content architecture document `03`.

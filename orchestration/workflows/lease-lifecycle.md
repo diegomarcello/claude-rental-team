@@ -1,28 +1,16 @@
 # Lease Lifecycle
 
-From vacancy to move-out. Status: skeleton.
+Leasing end to end, from onboarding to owner payout. Source: content architecture document `03`.
 
-| # | Stage | Skill | Owner | Approval gate |
-|---|---|---|---|---|
-| 1 | List | `listing-copywriting` | TODO | TODO |
-| 2 | Qualify | `lead-qualification` | TODO | TODO |
-| 3 | Screen tenant | `tenant-screening` | TODO | TODO |
-| 4 | Contract | `contract-drafting-review` | TODO | TODO |
-| 5 | Move in | `move-inspections` | TODO | TODO |
-| 6 | Administer | `lease-administration` | TODO | TODO |
-| 7 | Maintain | `maintenance-requests` | TODO | TODO |
-| 8 | Collect | `accounts-receivable` | TODO | TODO |
-| 9 | Pay owner | `owner-payouts` | TODO | TODO |
-| 10 | Move out | `move-inspections` | TODO | TODO |
+| # | Stage | Skills |
+|---|---|---|
+| 1 | Intake and move-in inspection | `rt-property-management:move-inspections` |
+| 2 | Listing | `rt-marketing:listing-copywriting` |
+| 3 | Qualify and visit | `rt-pre-sales:lead-qualification`, `rt-pre-sales:visit-scheduling` |
+| 4 | Screen tenant | `rt-property-management:tenant-screening` |
+| 5 | Contract and guarantee | `rt-legal:contract-drafting-review` |
+| 6 | Monthly billing | `rt-finance:accounts-receivable` |
+| 7 | Owner payout | `rt-finance:owner-payouts` |
+| 8 | Annual adjustment | `rt-property-management:lease-administration` |
 
-## Entry criteria
-
-TODO
-
-## Exit criteria
-
-TODO
-
-## Failure paths
-
-TODO
+Owners, deadlines, exit criteria and failure paths are not defined yet.

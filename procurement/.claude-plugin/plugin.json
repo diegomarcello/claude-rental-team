@@ -1,7 +1,7 @@
 {
   "name": "rt-procurement",
-  "description": "Suppliers, contractors and quote comparison. (skeleton)",
-  "version": "0.1.0",
+  "description": "Suppliers, contractors and quote comparison.",
+  "version": "0.4.0",
   "author": {
     "name": "diegomarcello",
     "url": "https://github.com/diegomarcello"

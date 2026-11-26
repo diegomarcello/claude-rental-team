@@ -2,11 +2,11 @@
 
 Scope, budget, schedule and quality control of renovation works.
 
-Plugin: `rt-renovation` · Status: skeleton
+Plugin: `rt-renovation` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,18 +15,19 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-renovation-manager`
+- `rt-scope-architect`
 - `rt-cost-estimator`
-- `rt-works-supervisor`
+- `rt-site-supervisor`
 
 ## Skills
 
-- `renovation-router`
-- `scope-of-work`
+- `router-renovation`
 - `renovation-budget`
-- `works-schedule`
+- `scope-of-work`
 - `works-quality-inspection`
+- `works-schedule`
 
 ## Commands
 
-- `/rt-renovation-plan`
+- `/rt-scope-of-work`
+- `/rt-renovation-budget`

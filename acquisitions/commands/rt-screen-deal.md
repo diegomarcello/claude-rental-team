@@ -1,28 +1,27 @@
 ---
-description: "Screen a property opportunity and decide whether to pursue it. (skeleton)"
+description: "Screen acquisition opportunities (on-market, off-market, foreclosure/judicial auctions, distressed assets) using knock-out criteria and weighted scoring prior to full underwriting."
 argument-hint: "<property or listing>"
 disable-model-invocation: true
 ---
 
 # /rt-screen-deal
 
-> **Skeleton.** The procedures in this file are not written yet. Tell the user so. Do not improvise legal opinions, appraisals, tax positions, contracts or financial entries from it.
-
 Input: `$ARGUMENTS`
 
 ## Skills
 
 - `opportunity-screening`
-- `deal-feasibility`
 
 ## Steps
 
-TODO
+1. Parse the input. Ask for the jurisdiction and any mandatory input in the reference file that is missing.
+2. Run the `opportunity-screening` skill with the reference for that jurisdiction and any `known-issues.md`.
+3. Do not guess values, rates or thresholds.
 
 ## Report format
 
-TODO
+Summary first, then the checklist or table, the calculations with their inputs, and the pending items.
 
 ## Approval required
 
-TODO
+Name the reviewer from the reference file. Nothing is signed, paid, filed or sent by this command.

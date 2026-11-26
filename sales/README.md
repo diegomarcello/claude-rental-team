@@ -2,11 +2,11 @@
 
 Proposals, negotiation, financing, closing and commissions.
 
-Plugin: `rt-sales` · Status: skeleton
+Plugin: `rt-sales` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,19 +15,20 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-sales-manager`
-- `rt-broker`
-- `rt-mortgage-advisor`
+- `rt-offer-negotiator`
+- `rt-mortgage-simulator`
+- `rt-closing-coordinator`
 
 ## Skills
 
-- `sales-router`
-- `proposal-negotiation`
-- `financing-simulation`
+- `router-sales`
 - `closing-checklist`
 - `commission-calculation`
+- `financing-simulation`
+- `proposal-negotiation`
 
 ## Commands
 
-- `/rt-proposal`
-- `/rt-closing`
+- `/rt-financing-simulation`
+- `/rt-closing-checklist`
+- `/rt-commission`

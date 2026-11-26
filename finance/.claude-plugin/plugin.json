@@ -1,7 +1,7 @@
 {
   "name": "rt-finance",
-  "description": "Payables, receivables, collections, cash, owner payouts, close and taxes. (skeleton)",
-  "version": "0.1.0",
+  "description": "Payables, receivables, collections, cash, owner payouts, close and taxes.",
+  "version": "0.4.0",
   "author": {
     "name": "diegomarcello",
     "url": "https://github.com/diegomarcello"

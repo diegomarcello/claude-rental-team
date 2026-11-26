@@ -2,11 +2,11 @@
 
 Handover, warranty, complaints and customer retention.
 
-Plugin: `rt-post-sales` · Status: skeleton
+Plugin: `rt-post-sales` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,17 +15,18 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-post-sales-manager`
-- `rt-customer-support`
+- `rt-handover-coordinator`
+- `rt-warranty-engineer`
+- `rt-ombuds-retention`
 
 ## Skills
 
-- `post-sales-router`
-- `property-handover`
-- `warranty-claims`
+- `router-post-sales`
 - `complaint-resolution`
 - `customer-retention`
+- `property-handover`
+- `warranty-claims`
 
 ## Commands
 
-- `/rt-handover`
+- None. Use the router or the agents.

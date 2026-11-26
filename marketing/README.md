@@ -2,11 +2,11 @@
 
 Campaigns, listings, content, paid media and lead generation.
 
-Plugin: `rt-marketing` · Status: skeleton
+Plugin: `rt-marketing` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,21 +15,19 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-marketing-manager`
-- `rt-content-creator`
-- `rt-performance-marketer`
-- `rt-brand-designer`
+- `rt-campaign-strategist`
+- `rt-listing-copywriter`
+- `rt-growth-compliance`
 
 ## Skills
 
-- `marketing-router`
+- `router-marketing`
 - `campaign-planning`
-- `listing-copywriting`
-- `social-media`
-- `seo-paid-media`
 - `lead-generation`
+- `listing-copywriting`
+- `seo-paid-media`
+- `social-media`
 
 ## Commands
 
-- `/rt-campaign`
 - `/rt-listing`

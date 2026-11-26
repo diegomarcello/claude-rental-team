@@ -10,3 +10,11 @@ __pycache__/
 # Private company data
 /company-context.md
 /private/
+/company-templates/
+
+# Keys and delivery packages (a package may contain company context)
+*.pem
+*.key
+.content-source/*.zip
+.content-source/**/company-context.md
+.content-source/**/private/

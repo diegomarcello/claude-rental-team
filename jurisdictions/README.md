@@ -2,11 +2,11 @@
 
 Country, state and member-state rules used by all departments: Brazil, United States and Europe.
 
-Plugin: `rt-jurisdictions` · Status: skeleton. Nothing in the reference files has been verified.
+Plugin: `rt-jurisdictions` · Status: draft. Eight topics for Brazil, the United States and Europe. Read the [known issues](skills/jurisdiction-lookup/references/known-issues.md) before relying on any rule.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team

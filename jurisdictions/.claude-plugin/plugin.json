@@ -1,7 +1,7 @@
 {
   "name": "rt-jurisdictions",
-  "description": "Country, state and member-state rules used by all departments: Brazil, United States and Europe. (skeleton)",
-  "version": "0.1.0",
+  "description": "Country, state and member-state rules used by all departments: Brazil, United States and Europe.",
+  "version": "0.4.0",
   "author": {
     "name": "diegomarcello",
     "url": "https://github.com/diegomarcello"

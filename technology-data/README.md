@@ -2,11 +2,11 @@
 
 Systems integration, business intelligence and information security.
 
-Plugin: `rt-technology-data` · Status: skeleton
+Plugin: `rt-technology-data` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,16 +15,15 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-it-manager`
-- `rt-bi-analyst`
+- `rt-data-infosec`
 
 ## Skills
 
-- `technology-data-router`
-- `systems-integration`
+- `router-technology-data`
 - `bi-reporting`
 - `information-security`
+- `systems-integration`
 
 ## Commands
 
-- `/rt-kpi-report`
+- None. Use the router or the agents.

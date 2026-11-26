@@ -28,6 +28,6 @@ TODO
 
 TODO
 
-## Review before removing skeleton status
+## Review before marking a skill verified
 
 TODO

@@ -2,11 +2,11 @@
 
 Title due diligence, contracts, tenancy law, disputes, privacy and anti-money-laundering.
 
-Plugin: `rt-legal` · Status: skeleton
+Plugin: `rt-legal` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,21 +15,24 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-real-estate-lawyer`
-- `rt-contracts-specialist`
-- `rt-litigation-lawyer`
-- `rt-compliance-officer`
+- `rt-title-diligence`
+- `rt-contract-counsel`
+- `rt-tenancy-advisor`
+- `rt-eviction-litigator`
+- `rt-dpo-mlro`
 
 ## Skills
 
-- `legal-router`
-- `title-due-diligence`
+- `router-legal`
 - `contract-drafting-review`
-- `tenancy-law`
 - `disputes-eviction`
 - `privacy-aml`
+- `tenancy-law`
+- `title-due-diligence`
 
 ## Commands
 
 - `/rt-due-diligence`
-- `/rt-contract-check`
+- `/rt-contract-review`
+- `/rt-eviction`
+- `/rt-kyc-aml`

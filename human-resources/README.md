@@ -2,11 +2,11 @@
 
 Recruiting, onboarding, performance and compensation.
 
-Plugin: `rt-human-resources` · Status: skeleton
+Plugin: `rt-human-resources` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,16 +15,15 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-hr-manager`
-- `rt-recruiter`
+- `rt-hr-licensing`
 
 ## Skills
 
-- `human-resources-router`
-- `recruiting`
+- `router-human-resources`
 - `employee-onboarding`
 - `performance-compensation`
+- `recruiting`
 
 ## Commands
 
-- `/rt-hire`
+- None. Use the router or the agents.

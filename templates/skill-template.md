@@ -3,34 +3,21 @@ name: <skill-name>
 description: "Use when <trigger>."
 license: GPL-2.0-only
 metadata:
-  version: 0.1.0
+  version: 0.2.0
   category: <department>
-  status: skeleton
+  status: draft
 ---
 
 # <Skill Name>
 
-## Before Starting
+<One sentence objective.>
 
-- Read `company-context.md` in the working project if it exists (template: `executive-router` skill, `rt-executive` plugin).
-- Identify the country and state, then load the rules with the `jurisdiction-lookup` skill.
+## How to use
 
-## Inputs
-
-TODO
-
-## Workflow
-
-TODO
-
-## Outputs
-
-TODO
+1. Identify the jurisdiction.
+2. Read only the matching file in `references/`.
+3. Read `references/known-issues.md` if present.
 
 ## Handoffs
 
-TODO
-
 ## Guardrails
-
-TODO

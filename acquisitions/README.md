@@ -2,11 +2,11 @@
 
 Property sourcing, opportunity screening, feasibility and purchase negotiation.
 
-Plugin: `rt-acquisitions` · Status: skeleton
+Plugin: `rt-acquisitions` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,17 +15,18 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-acquisition-manager`
-- `rt-property-sourcer`
-- `rt-investment-analyst`
+- `rt-deal-screener`
+- `rt-underwriting-modeler`
+- `rt-acquisition-negotiator`
 
 ## Skills
 
-- `acquisitions-router`
-- `opportunity-screening`
+- `router-acquisitions`
 - `deal-feasibility`
+- `opportunity-screening`
 - `purchase-negotiation`
 
 ## Commands
 
 - `/rt-screen-deal`
+- `/rt-feasibility`

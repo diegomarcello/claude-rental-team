@@ -2,11 +2,11 @@
 
 Market, income and cost valuation, and technical property inspection.
 
-Plugin: `rt-appraisal` · Status: skeleton
+Plugin: `rt-appraisal` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,18 +15,20 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-lead-appraiser`
-- `rt-market-analyst`
-- `rt-property-inspector`
+- `rt-cma-valuer`
+- `rt-income-valuer`
+- `rt-cost-valuer`
+- `rt-building-inspector`
 
 ## Skills
 
-- `appraisal-router`
+- `router-appraisal`
 - `comparative-market-analysis`
-- `income-capitalization`
 - `cost-approach`
+- `income-capitalization`
 - `technical-inspection`
 
 ## Commands
 
-- `/rt-appraise`
+- `/rt-appraise-cma`
+- `/rt-appraise-income`

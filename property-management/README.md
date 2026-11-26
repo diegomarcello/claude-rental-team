@@ -2,11 +2,11 @@
 
 Leasing, tenants, inspections, maintenance and condominium administration.
 
-Plugin: `rt-property-management` · Status: skeleton
+Plugin: `rt-property-management` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,20 +15,22 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-property-manager`
-- `rt-leasing-agent`
-- `rt-maintenance-coordinator`
+- `rt-tenant-underwriter`
+- `rt-lease-admin`
+- `rt-inspection-specialist`
+- `rt-maintenance-dispatcher`
 
 ## Skills
 
-- `property-management-router`
-- `tenant-screening`
-- `lease-administration`
-- `move-inspections`
-- `maintenance-requests`
+- `router-property-management`
 - `condo-administration`
+- `lease-administration`
+- `maintenance-requests`
+- `move-inspections`
+- `tenant-screening`
 
 ## Commands
 
-- `/rt-tenant-onboarding`
-- `/rt-maintenance-ticket`
+- `/rt-screen-tenant`
+- `/rt-rent-adjustment`
+- `/rt-inspection`

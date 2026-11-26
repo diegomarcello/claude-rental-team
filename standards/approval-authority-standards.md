@@ -1,19 +1,5 @@
-# Approval Authority Standards
+# Segregation of duties and approval gates
 
-Status: skeleton.
+No financial transaction, contract signature or regulatory report happens without segregated human approval.
 
-## Actions that need human approval
-
-TODO
-
-## Thresholds
-
-TODO
-
-## Segregation of duties
-
-TODO
-
-## Records
-
-TODO
+Source: content architecture document `03`.

@@ -2,11 +2,11 @@
 
 Pipeline, segmentation, data quality and automated customer journeys.
 
-Plugin: `rt-crm` · Status: skeleton
+Plugin: `rt-crm` · Status: draft. Each skill has references for Brazil (Portuguese), the United States and Europe (English). Review by a qualified professional is pending.
 
 ## Install
 
-Run inside Claude Code, from the marketplace in this repository. The `TODO` procedures in this plugin are placeholders, so use it as a starting point for writing your own.
+Run inside Claude Code, from the marketplace in this repository.
 
 ```
 /plugin marketplace add diegomarcello/claude-rental-team
@@ -15,17 +15,17 @@ Run inside Claude Code, from the marketplace in this repository. The `TODO` proc
 
 ## Agents
 
-- `rt-crm-manager`
-- `rt-crm-data-analyst`
+- `rt-pipeline-ops`
+- `rt-lifecycle-automator`
 
 ## Skills
 
-- `crm-router`
-- `pipeline-management`
-- `customer-segmentation`
+- `router-crm`
 - `crm-data-hygiene`
+- `customer-segmentation`
 - `journey-automation`
+- `pipeline-management`
 
 ## Commands
 
-- `/rt-pipeline-review`
+- None. Use the router or the agents.

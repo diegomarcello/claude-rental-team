@@ -1,0 +1,6 @@
+# Arquivos sensíveis e contexto privado da empresa
+company-context.md
+private/
+*.env
+*.pem
+*.key

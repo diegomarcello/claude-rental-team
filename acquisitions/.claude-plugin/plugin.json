@@ -1,7 +1,7 @@
 {
   "name": "rt-acquisitions",
-  "description": "Property sourcing, opportunity screening, feasibility and purchase negotiation. (skeleton)",
-  "version": "0.1.0",
+  "description": "Property sourcing, opportunity screening, feasibility and purchase negotiation.",
+  "version": "0.4.0",
   "author": {
     "name": "diegomarcello",
     "url": "https://github.com/diegomarcello"

@@ -1,15 +1,5 @@
-# Quality Standards
+# Versioning and legal review
 
-Status: skeleton.
+No skill reaches `confidence: verified` without signed review by a professional licensed in that jurisdiction and a completed company questionnaire.
 
-## Definition of done
-
-TODO
-
-## Review
-
-TODO
-
-## Evidence
-
-TODO
+Source: content architecture document `03`.

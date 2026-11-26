@@ -39,6 +39,21 @@ Install `rt-executive` and `rt-jurisdictions` first; the other departments refer
 /plugin install rt-jurisdictions@claude-rental-team
 ```
 
-## Company context
+## First use
 
-Copy `executive/skills/executive-router/assets/company-context.md` to your working project as `company-context.md` and fill it in.
+Open Claude Code in your company project and run:
+
+```
+/rt-executive:company-setup
+```
+
+It asks for, and records in `company-context.md`:
+
+1. The company context.
+2. The approval limits, row by row. Values in a filled example are not rules until you confirm them.
+3. The collections ladder.
+4. The five leasing templates that are still headings only: collection notice, receivables aging, lease summary, move inspection record and tenant application. Your versions are saved in `company-templates/` in your project.
+
+Claude Code has no step that runs during installation. Instead, `rt-executive` shows a reminder at the start of the first session after installation, and later whenever setup items are pending. The leasing skills also ask for what they need when you use them, even without `rt-executive`.
+
+Never commit `company-context.md` to a public repository.

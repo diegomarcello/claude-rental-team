@@ -1,28 +1,16 @@
 # Orchestration
 
-How departments work together. Start at the `executive-router` skill when a request spans departments.
+How departments work together. Start with `rt-executive:router-executive` when a request spans departments.
 
 ## Workflows
 
-- [Acquire Renovate Sell](workflows/acquire-renovate-sell.md): from opportunity to sold property
-- [Sales Funnel](workflows/sales-funnel.md): from campaign to signature
-- [Lease Lifecycle](workflows/lease-lifecycle.md): from vacancy to move-out
-- [Post Sale Warranty](workflows/post-sale-warranty.md): from handover to retention
-- [Procure To Pay](workflows/procure-to-pay.md): from need to paid supplier
-- [Rent To Cash](workflows/rent-to-cash.md): from rent due to closed books
+- [Listing To Sale](workflows/listing-to-sale.md): Listing, marketing and sale (brokerage)
+- [Buy Renovate Resell](workflows/buy-renovate-resell.md): Buy, renovate and resell (flip)
+- [Lease Lifecycle](workflows/lease-lifecycle.md): Leasing end to end, from onboarding to owner payout
+- [Delinquency To Eviction](workflows/delinquency-to-eviction.md): Delinquency, collection and eviction
+- [Maintenance And Warranty](workflows/maintenance-and-warranty.md): Maintenance and post-delivery warranty
+- [Governance And Close](workflows/governance-and-close.md): Governance, monthly close and audit
 
 ## Related
 
 - [Handoffs](handoffs.md)
-
-## Routing rules
-
-TODO
-
-## Escalation
-
-TODO
-
-## Shared records
-
-TODO

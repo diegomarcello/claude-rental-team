@@ -1,15 +1,5 @@
-# Documentation Standards
+# Document schema
 
-Status: skeleton.
+Every skill reference and deliverable has YAML front matter and 13 standard sections, and separates legal rule, market practice and company decision.
 
-## Files
-
-TODO
-
-## Naming
-
-TODO
-
-## Versioning
-
-TODO
+Source: content architecture document `03`.
